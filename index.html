@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Толя Fitness | Качалка для настоящих мужиков</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #0c0c0c;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bg.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #ff9900;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            background: #ff9900;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ffaa33;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff9900;
+            text-transform: uppercase;
+        }
+
+        .about {
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .trainers {
+            background: #0c0c0c;
+        }
+
+        .trainer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .trainer-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .trainer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255,153,0,0.3);
+        }
+
+        .trainer-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .trainer-name {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #ff9900;
+        }
+
+        .trainer-motto {
+            font-style: italic;
+            color: #ccc;
+        }
+
+        .pricing {
+            background: #1a1a1a;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .pricing-card {
+            background: #0c0c0c;
+            border: 2px solid #ff9900;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .pricing-card:hover {
+            background: #ff9900;
+            color: #000;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #ff9900;
+        }
+
+        .pricing-card:hover .price {
+            color: #000;
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Приветствие -->
+    <section class="hero">
+        <h1>Толя Fitness</h1>
+        <p>Здесь железо подчиняется воле. Здесь рождаются характер и сила. Добро пожаловать в мир настоящих мужчин.</p>
+        <a href="#about" class="cta-button">В бой</a>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Толя Fitness — это не просто качалка. Это храм железа, где каждый поднимающий штангу становится лучше. Мы создали место, где нет места слабости, есть только рост. Здесь ты найдёшь всё: современное оборудование, атмосферу братства и тренеров, которые знают, как выжать из тебя максимум.</p>
+        </div>
+    </section>
+
+    <!-- Тренеры -->
+    <section class="trainers">
+        <div class="container">
+            <h2>Наши тренеры</h2>
+            <div class="trainer-grid">
+                <div class="trainer-card">
+                    <img src="trainer1.jpg" alt="Тренер 1" class="trainer-img">
+                    <h3 class="trainer-name">Иван Петров</h3>
+                    <p class="trainer-motto">"Сила — это не просто мышцы. Сила — это дисциплина."</p>
+                </div>
+                <div class="trainer-card">
+                    <img src="trainer2.jpg" alt="Тренер 2" class="trainer-img">
+                    <h3 class="trainer-name">Алексей Смирнов</h3>
+                    <p class="trainer-motto">"Не бывает плохих генетик — бывает мало усилий."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Абонименты -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Абонименты</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Разовое занятие</h3>
+                    <div class="price">500 руб.</div>
+                    <p>Попробуй наши возможности</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>6 занятий</h3>
+                    <div class="price">2500 руб.</div>
+                    <p>Выгодный пакет для старта</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>15 занятий</h3>
+                    <div class="price">6999 руб.</div>
+                    <p>Максимальная выгода для чемпионов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>Толя Fitness © 2025. Все права защищены. Никакие данные пользователей не собираются.</p>
+    </footer>
+</body>
+</html>
